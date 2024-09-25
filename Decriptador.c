@@ -12,9 +12,9 @@ void hexadecimalParaString(char hexadecimal[100])
 
     for (i = 0; i < tamanho; i += 2)
     {
-        char decimalParaString[3] = {hexadecimal[i], hexadecimal[i + 1]};//identificar o par do código hexadecimal
-        int ASCII = (int)strtol(decimalParaString, NULL, 16);//converter hexadecimal para decimal
-        armazenaString[x] = (char)ASCII;//converter decimal para caractere e armazenar valor na variável
+        char decimalParaString[3] = {hexadecimal[i], hexadecimal[i + 1]}; // identificar o par do código hexadecimal
+        int ASCII = (int)strtol(decimalParaString, NULL, 16);             // converter hexadecimal para decimal
+        armazenaString[x] = (char)ASCII;                                  // converter decimal para caractere e armazenar valor na variável
         x++;
 
         func_val(x, b);
@@ -33,7 +33,7 @@ int main()
     func_val(x, b);
 
     printf("Insira a mensagem criptografada: ");
-    scanf("%s", &hexadecimal);
+    scanf("%s", &hexadecimal); // fgets não funcionou corretamente
     hexadecimalParaString(hexadecimal);
 
     return 0;
