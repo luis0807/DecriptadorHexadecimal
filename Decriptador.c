@@ -12,7 +12,7 @@ void hexadecimalParaString(char hexadecimal[100])
 
     for (i = 0; i < tamanho; i += 2)
     {
-        char decimalParaString[3] = {hexadecimal[i], hexadecimal[i + 1]};
+        char decimalParaString[3] = {hexadecimal[i], hexadecimal[i + 1]};//identificar o par do código hexadecimal
         int ASCII = (int)strtol(decimalParaString, NULL, 16);
         armazenaString[x] = (char)ASCII;
         x++;
